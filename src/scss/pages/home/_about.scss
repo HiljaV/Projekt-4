@@ -1,0 +1,79 @@
+@use '../../layout/layout';
+@use '../../components/buttons' as button;
+@use '../../components/details';
+
+.about {
+    @include layout.default();
+    padding: var(--section-gap) 0;
+
+    &__inner {
+        grid-column: inner;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--gap-l);
+        padding: 0 var(--gap-l);
+        align-items: center;
+    }
+
+    &__image {
+        margin: 0;
+        position: relative;
+
+        img {
+            display: block;
+            position: relative;
+            z-index: 2;
+        }
+
+        .black-box {
+            right: calc( var(--gap-l) * -1);
+            bottom: calc( var(--gap-l) * -1);
+        }
+    }
+
+    &__title {
+        margin-top: 0;
+        @include details.separator;
+    }
+
+    &__excerpt {
+
+        color: var(--color-dark-600);
+
+        p {
+           &:first-of-type {
+            margin-top: 0;
+           } 
+
+           &:last-of-type {
+            margin-bottom: 0;
+           }
+        }
+    }
+
+    &__footer {
+        margin-top: var(--gap-l);
+    }
+
+    &__buttons {
+        display: flex;
+        gap: var(--gap-m);
+    }
+
+    &__button {
+        @include button.default(
+            $color: var(--color-dark), 
+            $border-color: var(--color-dark-900),
+            $hover-background: var(--color-accent-900)
+            );
+    }
+
+}
+
+.black-box {
+    @include details.frame;
+    background-color: var(--color-dark);
+    width: 333px;  //temp
+    height: 333px; //temp
+    position: absolute;
+}
