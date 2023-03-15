@@ -38,8 +38,6 @@
 
     &__excerpt {
 
-        color: var(--color-dark-600);
-
         p {
            &:first-of-type {
             margin-top: 0;
@@ -65,7 +63,7 @@
             $color: var(--color-dark), 
             $border-color: var(--color-dark-900),
             $hover-background: var(--color-accent-900)
-            );
+        );
     }
 
 }
