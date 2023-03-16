@@ -5,7 +5,7 @@
 .food-menu {
     @include layout.default();
     background-color: var(--color-accent-700);
-    padding: var(--section-gap) 0;
+    padding: var(--section-gap) 0 calc( var(--section-gap) * 2);
 
     &__inner {
         @include details.frame($color: var(--color-dark));
