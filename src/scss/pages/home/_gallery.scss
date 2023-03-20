@@ -12,9 +12,9 @@
     }
 
     &__item {
-        background-color: red;
         aspect-ratio: 1 / 1;
         @include details.frame;
+        flex: 1;
 
         img {
             width: 100%;
