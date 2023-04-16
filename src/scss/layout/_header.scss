@@ -11,6 +11,32 @@
     align-items: center;
     padding: 0 32px;
 
+    &--scroll {
+        background-color: var(--color-dark);
+        height: 80px;
+        &:after {
+            content: '';
+            height: 1px;
+            width: 100%;
+            background-color: var(--color-accent);
+            opacity: 0.34;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        
+        .site-header__branding {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &__branding {
+        visibility: hidden;
+        opacity: 0;
+        line-height: 1;
+    }
+
     &__content {
         margin-left: auto;
         display: flex;
