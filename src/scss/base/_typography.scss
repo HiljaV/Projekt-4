@@ -46,7 +46,7 @@ p {
 
 a {
 
-    color: var(-color-dark);
+    color: var(--color-dark);
     text-decoration: none;
     line-height: var(--line-height);
     &:hover {
