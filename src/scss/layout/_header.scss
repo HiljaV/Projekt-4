@@ -20,6 +20,9 @@
 
     &__button {
         @include button.default($border-color: var(--color-accent));
+        &--menu-opened {
+            display: none;
+        }
     }
 }
 
@@ -32,7 +35,7 @@
     border: 0;
     border-radius: 0;
 
-    &:focus, &--close {
+    &--close {
 
         .menu-button__hamburger {
 
